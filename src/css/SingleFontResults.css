@@ -1,0 +1,137 @@
+/* Layout for the Uploaded Image and Results */
+.single-font-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+    padding-top: 80px;  /* Matches title margin */
+}
+
+.processed .single-font-container {
+    padding-top: 50px; /* Ensure spacing below navbar */
+}
+
+/* Section for the uploaded image */
+/* Adjust uploaded image section */
+.uploaded-image-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Section for font results */
+/* Adjust results container */
+/* Ensure parent container is centered */
+.single-font-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align all cards */
+    gap: 15px; /* Spacing between cards */
+    width: 100%;
+    max-width: 800px; /* Restrict max width for better responsiveness */
+    margin: 0 auto; /* Center container */
+}
+
+
+
+/* Title styling */
+/* Ensure title always stays below the navbar */
+.single-font-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;  /* Prevents it from moving */
+    z-index: 10;
+    margin-top: 80px;  /* Push it below navbar */
+    padding-top: 150px;
+}
+
+/* Font result card */
+.single-font-card {
+    width: 100%;  /* Take full width of the parent container */
+    max-width: 600px; /* Restrict max width for better alignment */
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.h2 {
+    font-weight: 100;
+}
+
+.single-font-card:hover {
+    transform: scale(1.02);
+}
+
+/* Font name and match score */
+.single-font-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.match-score {
+    color: #6b46c1;
+    font-size: 16px;
+}
+
+/* Progress bar container */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Progress fill */
+.progress-fill {
+    height: 8px;
+    border-radius: 5px;
+    background: #6b46c1;
+}
+
+/* Font preview text */
+.single-font-preview {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+/* No font message */
+.no-font-message {
+    margin-top: 20px; /* Reduce spacing */
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+/* Match Again Button */
+.match-again-btn {
+    background: #6b46c1;
+    color: white;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+.match-again-btn:hover {
+    background: #553c9a;
+}

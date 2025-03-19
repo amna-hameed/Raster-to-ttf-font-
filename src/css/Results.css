@@ -1,0 +1,373 @@
+/* Prevent auto-scrolling */
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Ensures the results container takes full height */
+.multi-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 100px; /* Default reduced padding during processing */
+    transition: padding-top 0.5s ease-in-out;
+}
+
+/* Increase padding AFTER processing (so content fits well) */
+.processed .multi-results-container {
+    padding-top: 500px;
+}
+
+/* Expandable container for line previews */
+.multi-font-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Scrollable section to prevent pushing content up */
+.line-results-container {
+    width: 100%;
+    max-height: 70vh; /* Prevents overflow, but allows space */
+    overflow-y: auto; /* Enable scrolling when there are many lines */
+    padding-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 90px; /* Ensures consistent spacing */
+    margin-bottom: 0px;
+}
+
+.error-title {
+    font-size: 24px !important; /* Force the font size */
+    font-weight: bold !important;
+    text-align: center !important;
+}
+
+.error-msg {
+    font-size: 20px !important; 
+    font-weight: bold !important;
+}
+
+/* Single Font*/
+
+.single-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 200px; /* Prevents title from being hidden by navbar */
+}
+
+/* Fixes too much gap for single-font results */
+.results-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Reduce spacing between elements */
+}
+
+/* Ensure the image container doesn’t collapse */
+.original-image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-x: auto; /* Enables horizontal scrolling for extra-wide images */
+}
+
+
+.original-image-section h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Increase spacing for better readability */
+}
+
+/* Properly size and center the image */
+.original-image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    width: 100%;   /* Full container width */
+    max-width: 800px;  /* Restrict width for better alignment */
+    height: 300px;  /* Fixed height for consistency */
+    border-radius: 10px;
+    overflow: hidden;  /* Prevents overflow */
+    padding: 10px;
+}
+
+
+/* Ensure image scales correctly */
+.original-image-box img {
+    max-width: 100%;  /* Prevents overflow */
+    max-height: 100%;  /* Ensures it fits inside box */
+    object-fit: contain; /* Maintains aspect ratio */
+    border-radius: 10px;
+}
+
+
+.multi-font-results-container,
+.single-font-results-container {
+    width: 80%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+
+/*...*/
+
+/* Single Font */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Multi Font */
+.content-wrapper-multi {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content */
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.line-analysis {
+    display: flex;
+    gap: 20px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.line-preview {
+    width: 40%;
+}
+
+.line-preview h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.line-image-box {
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.line-image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+}
+
+.font-predictions {
+    width: 60%;
+}
+
+.font-predictions h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.font-match {
+    margin-bottom: 10px;
+}
+
+.font-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #c084fc;
+}
+
+.font-preview-box {
+    margin-top: 8px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    background: #fff;
+}
+
+.transition-effect {
+    transform: scale(1.02);
+}
+
+.transition-effect:nth-child(n) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* .loading-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.loading-bar {
+    width: 80%;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 4px;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.loading-progress {
+    width: 0;
+    height: 100%;
+    background-color: #3498db;
+    animation: loading-animation 1.5s infinite linear;
+} */
+
+.loading-bar-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    animation: loading-animation 2s infinite;
+}
+
+@keyframes loading-animation {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.line-analysis {
+    margin-bottom: 20px;
+}
+
+.font-predictions {
+    margin-top: 15px;
+}
+
+/* All Button Group - Align buttons side by side */
+.button-group {
+    display: flex;  /* Align buttons in a row */
+    gap: 15px;      /* Space between buttons */
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 20px;  /* Add spacing above */
+}
+
+/* All Button Styling */
+.fuse-again-btn {
+    background-color: #485394 !important;  /* Purple background */
+    color: white;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.fuse-again-btn:hover {
+    background-color: #396fa5 !important;
+}
+
+
+.error-message {
+    margin-top: 0px;
+}
+
+/* ERror message */
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    color: #d8000c;
+    padding: 20px;
+    border: 2px solid #ddd;
+    margin-top: 20px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.error-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.error-image img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #ff4d4d;
+}
+
+.error-message-box {
+    flex: 1;
+}
+
+h3 {
+    color: #000
+}
+
+.error-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000
+}
+
+.error-message {
+    font-size: 16px;
+    font-weight: bold;
+}

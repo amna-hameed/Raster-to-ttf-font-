@@ -1,0 +1,172 @@
+/* signup.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50vh; /* Adjust this value if needed */
+    margin-bottom: 20px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #c58bf9;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.signup-btn {
+    background-color: #c58bf9;
+    border: none;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #b36ae3;
+}
+
+.signup-content {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    margin-top: 50px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.signup-form-section {
+    flex: 1;
+    padding: 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.signup-submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #3b9bd369;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.signup-submit-btn:hover {
+    background-color: #70a9df;
+}
+
+.info-section {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-section h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signup-content {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .signup-form-section, 
+    .info-section {
+        padding: 30px;
+    }
+
+    .info-section {
+        text-align: center;
+    }
+}
+
+.login-link {
+    margin-top: 10px;
+    font-size: 16px !important;
+}
+
+.login-logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login-logo span:first-child {
+    color: #c58bf9; /* Purple */
+}
+
+.login-logo span:last-child {
+    color: #0056a2; /* Blue */
+}

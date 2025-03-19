@@ -1,0 +1,236 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(0, 123, 255, 0.9);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffdd57;
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    width: 90%;
+    margin-top: 80px; /* Adjusted for fixed nav */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 500px; /* Wider form container */
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.form-container h1 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 12px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-group button:hover {
+    background: #0056b3;
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+    font-size: 1rem;
+}
+
+.form-container a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-container a:hover {
+    color: #0056b3;
+}
+
+/* Flash Messages */
+.flash {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.flash.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.flash.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Results Section */
+#results {
+    margin-top: 20px;
+}
+
+.result {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.result h3 {
+    color: #007BFF;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.result p {
+    text-align: left;
+    color: #333;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.images div {
+    width: 48%;
+    text-align: center;
+}
+
+.images h4 {
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.images img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #007BFF;
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+}
+
+/* Error Message */
+.error {
+    color: red;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+/* Video Container */
+.video-container {
+    margin: 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+video {
+    width: 100%;
+    border-radius: 15px;
+}

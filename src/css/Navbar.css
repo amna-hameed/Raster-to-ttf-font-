@@ -1,0 +1,112 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+.navbar {
+    height: 60px; /* Fixed navbar height */
+    padding: 0 20px; /* Adjusted padding */
+    background-color: #ffffff;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Ensure navbar items align properly */
+.navbar .container-fluid {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Navbar Full-Width Fix */
+.expanded-navbar {
+    width: 100vw;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation links */
+.navbar-nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar links */
+.navbar-light .navbar-nav .nav-link {
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    padding: 10px 12px; /* Improved spacing */
+}
+
+/* Navbar link hover effect */
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #0056b3; /* Cool Blue */
+}
+
+/* Remove default button styles */
+.navbar .btn-link {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .btn-link:hover {
+    color: #d9534f; /* Red for logout */
+}
+
+/* FontFusion Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    color: #c58bf9 !important; /* Purple */
+}
+
+.logo {
+    color: #0056a2 !important; /* Blue */
+}
+
+
+
+/* Responsive Navbar */
+@media (max-width: 992px) {
+    .expanded-navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 5%;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+/* Remove any box shadows */
+.no-shadow, .navbar {
+    box-shadow: none !important;
+    border: none !important;
+}

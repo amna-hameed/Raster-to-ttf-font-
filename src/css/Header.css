@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Oswald:wght@500&family=Poppins:wght@300&display=swap');
+
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background: white;
+}
+
+.subtext {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 0px;
+}
+
+.main-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  color: #382579;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #444;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
